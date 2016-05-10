@@ -30,9 +30,6 @@ import marc.edu.upc.eetac.dsa.beeter_app.Beeter.BeeterClient;
 /**
  * A login screen that offers login via email/password.
  */
-/**
- * A login screen that offers login via email/password.
- */
 public class LoginActivity extends AppCompatActivity  {
 
     /**
@@ -211,7 +208,7 @@ public class LoginActivity extends AppCompatActivity  {
             showProgress(false);
 
             if (success) {
-                Intent intent = new Intent(LoginActivity.this, StingCreateActivity.class);
+                Intent intent = new Intent(LoginActivity.this, StingsListActivity.class);
                 startActivityForResult(intent, reqnum);
 
             } else {
@@ -227,22 +224,5 @@ public class LoginActivity extends AppCompatActivity  {
             mAuthTask = null;
             showProgress(false);
         }
-    }
-
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (requestCode == reqnum) {
-
-            if (resultCode == RESULT_OK) {
-                Log.d(TAG, "Sting creado");
-            }
-
-            if (resultCode == RESULT_CANCELED) {
-                Log.d(TAG, "no se ha podido crear el Sting");
-            }
-        }
-
-        startActivity(new Intent(LoginActivity.this, StingsListActivity.class));
-
     }
 }

@@ -55,6 +55,7 @@ public class StingCreateActivity extends AppCompatActivity {
             if (result == true) {
                 Intent i = getIntent();
                 setResult(RESULT_OK, i);
+                startActivity(new Intent(StingCreateActivity.this, StingsListActivity.class));
                 finish();
             }
 

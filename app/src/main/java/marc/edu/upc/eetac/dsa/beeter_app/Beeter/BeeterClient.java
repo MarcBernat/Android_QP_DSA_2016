@@ -27,7 +27,7 @@ import marc.edu.upc.eetac.dsa.beeter_app.Beeter.entity.Sting;
  * Created by Marc on 8/05/2016.
  */
 public class BeeterClient {
-    private final static String BASE_URI = "http://192.168.0.37:8080/beeter";
+    private final static String BASE_URI = "http://10.183.61.115:8080/beeter";
     private static BeeterClient instance;
     private AuthToken authToken = null;
     private Sting sting = null;
